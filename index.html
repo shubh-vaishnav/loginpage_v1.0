@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registarion</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/019abd4307.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+          <div class="input-group">
+            <div class="input-field" id="namefield">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" placeholder="Name" />
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+
+            <p>Lost password, <a href="#">Click Here!</a></p>
+          </div>
+          <div class="btn">
+            <button type="button" id="signupbtn">Sign Up</button>
+            <button type="button" class="disable" id="signinbtn">
+              Sign In
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      let title = document.getElementById("title");
+      let namefield = document.getElementById("namefield");
+      let signupbtn = document.getElementById("signupbtn");
+      let signin = document.getElementById("signin");
+
+      signinbtn.onclick = function () {
+        namefield.style.maxHeight = "0";
+        title.innerHTML = "Sign In";
+      };
+
+      signupbtn.onclick = function () {
+        namefield.style.maxHeight = "65px";
+        title.innerHTML = "Sign Up";
+      };
+    </script>
+  </body>
+</html>
